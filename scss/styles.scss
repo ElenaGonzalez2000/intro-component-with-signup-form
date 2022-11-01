@@ -1,0 +1,121 @@
+@import "variables";
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+h1,
+p {
+    color: white;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+
+    input {
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+.main {
+    background-image: url(../images/bg-intro-mobile.png);
+    background-color: $red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 1.5rem 6rem 1.5rem;
+    text-align: center;
+
+    .hero {
+        margin-bottom: 2.5rem;
+        padding: 1rem;
+
+        .hero_tittle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero_paragraph {
+            font-size: 0.9rem;
+        }
+    }
+
+    .textInfo {
+        padding: 1rem;
+        background-color: $blue;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.322));
+    }
+
+    .form {
+        background-color: white;
+        border-radius: 0.5rem;
+        filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.322));
+        padding: 1rem;
+
+        .form_body {
+            display: flex;
+            flex-direction: column;
+
+            .form_input {
+                height: 3rem;
+                padding: 0rem 1rem;
+                margin-bottom: 1rem;
+                font-weight: 600;
+            }
+
+            .form_input--border {
+                border: 0.1rem solid $grayishBlue;
+                border-radius: 0.3rem;
+            }
+
+            .form_input_submit {
+                background-color: $green;
+                color: white;
+                font-size: 1rem;
+                border: none;
+                border-radius: 0.3rem;
+                font-weight: 400;
+                filter: drop-shadow(0px 4px 0px rgb(69, 175, 130));
+                &:hover{
+                    background-color: rgb(119, 226, 180);
+                }
+            }
+        }
+
+        .form_terms {
+            color: $grayishBlue;
+            font-size: 0.7rem;
+            padding: 0rem 1rem;
+            b{
+                color: $red;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .main{
+        background-image: url(../images/bg-intro-desktop.png);
+        flex-direction: row;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        padding: 0rem;
+        .hero{
+            width: 40%;
+            text-align: start;
+            padding: 0rem;
+            margin: 0rem 1rem 0rem 0rem;
+            .hero_tittle{
+                font-size: 2rem;
+                line-height: 3.5rem;
+            }
+        }
+        .container{
+            width: 40%;
+        }
+    }
+}
